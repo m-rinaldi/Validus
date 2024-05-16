@@ -103,7 +103,7 @@ let dto : PersonDto =
       Age       = Some 63
       StartDate = Some (new DateTime(2058, 1, 1)) }
 
-match validatePersonDto dto with
+match Person.ofDto dto with
 | Ok p -> printfn "%A" p
 | Error e ->
     e
